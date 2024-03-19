@@ -5,6 +5,7 @@
 }
 
 img {
+    /* rgba 괄호 안의 숫자: red green blue 투명도 */
     box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
     border-radius: 50%;
     width: 150px;
