@@ -1,8 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,700&display=swap');
+@import url(https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css);
 
 * {
-    font-family: "Noto Sans KR", sans-serif;
+    font-family: 'NanumSquare', "Noto Sans KR", sans-serif;
 }
+
+a, h1, h2 {
+    font-family: 'Montserrat', "Itim", sans-serif;
+}
+
 
 img {
     /* rgba 괄호 안의 숫자: red green blue 투명도 */
@@ -23,6 +30,10 @@ h2 {
     background-color: rgba(255, 177, 75, 0.675);
     padding: 5px 0px 5px 5px;
 }
+p {
+    margin: 10px;
+} 
+
 input {
     border: 1px solid #ccc;
     padding: 10px 30px;
@@ -30,6 +41,11 @@ input {
     background-color: rgba(0, 0, 0, 0);
     cursor: pointer;
 }
+
+li {
+    line-height: 1.5; 
+}
+
 a {
     text-decoration-line: none;
     color: white;
