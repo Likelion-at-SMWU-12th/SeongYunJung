@@ -21,6 +21,7 @@ while True:
 
     else:
         print("'y'또는 'n'을 입력해주세요. ")
+
 #2
 users=[]        #회원 정보를 저장할 리스트 생성
 
@@ -52,8 +53,6 @@ while True:
         
     #이메일 입력
     email=input('이메일: ')
-
-
 
 #3
     user['username']=username
