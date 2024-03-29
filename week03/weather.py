@@ -1,11 +1,17 @@
+from dotenv import load_dotenv
+import os
+
 import requests
 import json
 
+# load .env
+load_dotenv()
+
 city="Mongolia"
-apikey="ccc8dc44bfec27826794e54e9d4bad73"
+API_KEY = os.environ.get('API_KEY')
 lang="kr"
 
-api=f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={apikey}&lang={lang}&units=metric"
+api=f"https://api.openweathermap.org/data/2.5/weather?q={city}&appid={API_KEY}&lang={lang}&units=metric"
 
 result = requests.get(api)
 
