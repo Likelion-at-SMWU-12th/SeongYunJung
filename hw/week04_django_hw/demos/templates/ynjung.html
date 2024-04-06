@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yunjung's hobby</title>
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hahmlet:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sunflower:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hahmlet:wght@100..900&family=Nanum+Gothic&family=Noto+Sans+Mono:wght@100..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Sunflower:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
+        * {
+            font-family:  "Noto Sans KR", sans-serif;
+        }
+        /* "Nanum Gothic", */
+
+        a, h1, h2 {
+            font-family:  "Nunito Sans", "Nunito", 'Montserrat', sans-serif; 
+        }
+
+        h1{
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .profile{
+            display: flex;
+            margin: 20px 20px;
+        }
+        #yj-camera {
+            /* rgba 괄호 안의 숫자: red green blue 투명도 */
+            box-shadow: 0 1px 20px 0 rgba(0, 0, 0, 0.1);
+            border-radius: 50%;
+            width: 200px;
+            margin: 10px 160px 10px 30px;
+        }
+        .hobby-describe{
+            margin: 30px 30px;
+        }
+        h2 {
+            font-size: 28px;
+            margin-top: 40px;
+            border-radius: 6px;
+            background-color: rgba(75, 150, 255, 0.675);
+            padding: 5px 0px 5px 10px;
+        }
+        h4{
+            /* font-size: 24px; */
+            font-weight: bolder;
+            margin: 20px 0px 10px 30px;
+        }
+        p{
+            margin-left: 90px;
+            margin-top: 90px;
+            font-size: 20px;
+        }
+        .main-box {
+            max-width: 950px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        .photo {
+            margin-top: 10px;
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(30%, auto));
+        }
+        .photo figure {
+            position: relative;
+            overflow: hidden;
+            border-radius: 8px;
+            box-shadow: 0 4px 9px rgba(0, 0, 0, 0.1);
+        }
+        .photo img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+        }
+        .photo-caption {
+            text-align: center;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            font-size: 12px;
+            color: #666;
+        }
+        textarea {
+            width: 93%;
+            margin-top: 10px;
+            margin-left: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: transparent;
+            resize: vertical;
+        }       
+        .btn {
+            text-align: center;
+            margin: 8px;
+        }
+        #submitBtn{
+            border: 1px solid #ccc;
+            padding: 8px 20px;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0);
+            cursor: pointer;
+        }
+
+        #cancelBtn {
+            border: 1px solid #ccc;
+            color: #808080;
+            padding: 8px 20px;
+            border-radius: 20px;
+            background-color: rgba(0, 0, 0, 0);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-box">
+        <div class="yunjung-hobby">
+            <h1>YUNJUNG'S_HOBBY</h1>
+            <div class="profile">
+                {% load static %}
+                <img src="{% static '/images/yj-camera.jpg' %}" id="yj-camera" alt="한강 노을">
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;<strong>12</strong><br/>게시물</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>0</strong><br/>팔로워</p>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<strong>0</strong><br/>팔로잉</p>
+            </div>
+            <div class="hobby-describe">
+                <h4>📸 사진찍기</h4>
+                <ul span style="font-size:13px;">
+                    <li>저는 평소에 예쁜 것을 보면 사진찍는 것을 좋아해서 취미로 소개하게 되었습니다.</li>
+                    <li>사진을 잘 찍는다기보단 그냥 저의 추구미대로 찍는 걸 좋아합니다. 🙂</li>
+                    <li>보통 하늘 사진과 기억하고 싶은 소중한 순간들을 찍습니다!</li>
+                </ul>
+            </div>
+        </div>
+        <section>
+            <h2>YUNJUNG'S PHOTO ZONE</h2>
+            <div class="photo">
+                <figure>
+                    <img src="{% static '/images/photo1.jpg' %}" alt="한강 노을">
+                    <figcaption class="photo-caption">한강 노을</figcaption>
+                </figure>
+                <figure>
+                    <img src="{% static '/images/photo3.jpg' %}" alt="슈퍼슈퍼 태양">
+                    <figcaption class="photo-caption">울트라 슈퍼 태양</figcaption>
+                </figure>
+                <figure>
+                    <img src="{% static '/images/photo2.jpg' %}" alt="달">
+                    <figcaption class="photo-caption">달달달</figcaption>
+                </figure>
+                <figure>
+                    <img src="{% static '/images/photo6.jpg' %}" alt="하트구름">
+                    <figcaption class="photo-caption">춘천가다 발견한 하트구름</figcaption>
+                </figure>
+                <figure>
+                    <img src="{% static '/images/photo4.jpg' %}" alt="속초 무지개">
+                    <figcaption class="photo-caption">속초에서 본 무지개</figcaption>
+                </figure>
+                <figure>
+                    <img src="{% static '/images/photo9.jpg' %}" alt="강릉 기차 속">
+                    <figcaption class="photo-caption">기차타고 강릉가다 찍은 명언</figcaption>
+                </figure>
+                <figure>
+                    <img src="{% static '/images/photo5.jpg' %}" alt="제주도 하늘">
+                    <figcaption class="photo-caption">제주도 하늘 갬성</figcaption>
+                </figure>
+                <figure>
+                    <img src="{% static '/images/photo7.jpg' %}" alt="꽃">
+                    <figcaption class="photo-caption">우리동네 벚꽃 갬성</figcaption>
+                </figure>
+                <figure>
+                    <img src="{% static '/images/photo8.jpg' %}" alt="쌀국수집 갬성">
+                    <figcaption class="photo-caption">학교 앞 사이공마켓 갬성</figcaption>
+                </figure>
+                <figure>
+                    <img src="{% static '/images/photo10.jpg' %}" alt="크리스마스">
+                    <figcaption class="photo-caption">23년의 크리스마스</figcaption>
+                </figure>
+                <figure>
+                    <img src="{% static '/images/photo11.jpg' %}" alt="여행">
+                    <figcaption class="photo-caption">고등학교 친구들과 반티입고 여행</figcaption>
+                </figure>
+                <figure>
+                    <img src="{% static '/images/photo12.jpg' %}" alt="라이옹">
+                    <figcaption class="photo-caption">나는야 아기사자🦁</figcaption>
+                </figure>
+            </div>
+        </section>
+        <section>
+            <h2>WHAT'S YOUR HOBBY?</h2>
+            <h3>🔗 여러분은 어떤 취미를 가지고 있나요?</h3>
+            <textarea rows="4" cols="70" placeholder="여러분의 취미를 공유해주세요!"></textarea>
+            <div class="btn">
+                <input id='submitBtn' type="button" value="저장"/>
+                <input id='cancelBtn' type="button" value="취소"/>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
+
