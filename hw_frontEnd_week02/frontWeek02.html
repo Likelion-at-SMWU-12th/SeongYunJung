@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>yunjung's To-Do List</title>
+    <link rel="stylesheet" href="css/frontWeek02.css">
+
+</head>
+<body>
+    <section>
+        <h4 id="clock"></h4>
+        <div class="profile">
+            <div class="image">
+                <img src="./img.jpg"/>
+            </div>
+            <div class="intro">
+                <h3 id="name">yunjung</h3>
+                <p id="dynamic" class="lg-text">
+                </p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h3>Add to Todo List</h3>
+        <hr/>
+        <form id="add-todo">
+            <input type="text" placeholder="투두 작성 후 버튼을 누르세요" size=30 required/>
+            <button id="add-btn">add</button>
+        </form>
+    </section>
+    <section>
+        <h3>My Todo list</h3>
+        <hr/>
+        <ul id ="todo-list">
+        </ul>
+    </section>
+    <section>
+        <h3>My Completed list</h3>
+        <hr/>
+        <ul id ="completed-list">
+        </ul>
+    </section>
+
+
+    <script src="js/front_02_clock.js"></script>
+    <script src="js/front_02_todo.js"></script>
+    <script src="js/front_02_typing.js"></script>
+</body>
+</html>
