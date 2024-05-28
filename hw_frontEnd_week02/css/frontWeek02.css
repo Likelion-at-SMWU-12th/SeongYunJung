@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,700&display=swap');
+
+* {
+    font-family: 'Montserrat', "Noto Sans KR", "Itim", sans-serif;
+}
+
+section{
+    width: 600px;
+    padding: 30px;
+    margin: 20px;
+    margin-right: auto;
+    margin-left:auto;
+    border: 1px solid #ebebeb;
+    border-radius: 8px;
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,0.1);
+    background-color: rgb(254, 243, 229);
+}
+
+.profile{
+    display: flex;
+}
+
+img {
+    box-shadow: 0 1px 20px 0 rgba(0,0,0,0.1);
+    border-radius: 50%;
+    width:80px;
+    margin-top: 20px;
+}
+.image{
+    margin-left: 60px;
+}
+.intro{
+    margin-top: 10px;
+    margin-left: 20px;
+    /* line-height: 3px; */
+}
+
+h3{
+    color: orange;
+}
+#name{
+    color:black;
+}
+h4 {
+    color: orange;
+    text-align: center;
+}
+
+
+.lg-text{
+    margin-top: -50px;
+}
+
+#dynamic{
+    position: relative;
+    display: inline-block;
+}
+
+#dynamic::after{
+    content: "";
+    position:absolute;
+    right: -5px;
+    width: 2px;
+    height: 100%;
+    background-color: black;
+}
+
+#dynamic.active::after{
+    display: none;
+}
+#add-btn{
+    margin-left: 7px;
+}
+
+.li-style{
+    list-style:"📌  ";
+}
+
+.com-li-style{
+    list-style:"☑️  ";
+}
+
+.check-button{
+    background-color: transparent;
+    border:none;
+    margin: 5px 3px;
+    padding: 3px 10px;
+}
