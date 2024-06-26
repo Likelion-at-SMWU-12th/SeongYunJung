@@ -21,7 +21,7 @@ const StyledMain = styled.div`
 
 const StyledWelcome = styled.h1`
   background-color: #c0c0c0;
-  padding: 10px 20px;
+  padding: 10px 15px;
   margin: 0px 30px 5px 30px;
 `;
 

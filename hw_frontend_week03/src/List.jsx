@@ -40,7 +40,7 @@ const List = () => {
           <StyledHr />
           게시판 글 제목 (6)
           <StyledHr />
-          리액트 먼가 어려운 듯.. (11)
+          리액트 먼가 어려워요.. (11)
           <StyledHr />
           견뎌 (2)
           <StyledHr />
