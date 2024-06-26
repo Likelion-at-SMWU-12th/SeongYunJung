@@ -36,10 +36,25 @@ const StyledEditBtn = styled.img`
   width: 20px;
 `;
 
-const Profile = () => {
+const StyledAddPost = styled.button`
+  border: 0;
+  background-color: transparent;
+  margin-top: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 13px;
+  &:hover {
+    text-decoration: underline;
+  }
+`;
+
+const Profile = ({ setShowWrite }) => {
   const yjInfo = {
     nickName: "ynzung",
     major: "IT-Engineering",
+  };
+  const addPost = () => {
+    setShowWrite(true);
   };
   return (
     <div>
@@ -51,7 +66,7 @@ const Profile = () => {
         <StyledEditBtn src={process.env.PUBLIC_URL + "/edit.jpg"} />
         <br />
         <StyledMajor>프로필‣</StyledMajor>
-        <StyledName>📝 글쓰기</StyledName>
+        <StyledAddPost onClick={addPost}>📝 글쓰기</StyledAddPost>
       </StyledProfileBox>
     </div>
   );

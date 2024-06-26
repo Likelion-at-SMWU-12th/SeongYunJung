@@ -1,7 +1,9 @@
 import "./App.css";
+import React, { useState } from "react";
 import Profile from "./Profile";
 import List from "./List";
 import Content from "./Content";
+import Write from "./Write";
 import styled from "styled-components";
 
 const StyleEdge = styled.div`
@@ -28,16 +30,18 @@ const StyledContent = styled.div`
 `;
 
 function App() {
+  let [showWrite, setShowWrite] = useState(false);
+
   return (
     <div>
       <StyleEdge>
         <StyledMain>
           <StyledWelcome>Welcome to Yunjung's Board</StyledWelcome>
           <StyledContent>
-            <Profile />
+            <Profile setShowWrite={setShowWrite} />
             <List />
           </StyledContent>
-          <Content />
+          {showWrite ? <Write /> : <Content />}
         </StyledMain>
       </StyleEdge>
     </div>
