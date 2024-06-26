@@ -12,16 +12,16 @@ const StyleEdge = styled.div`
 `;
 const StyledMain = styled.div`
   width: 1000px;
-  padding: 50px;
+  padding: 40px 48px;
   margin-right: auto;
   margin-left: auto;
   background-color: white;
   min-height: 100vh;
 `;
 
-const StyledWelcome = styled.h1`
-  background-color: #c0c0c0;
-  padding: 10px 15px;
+const StyledWelcome = styled.h3`
+  background-color: #cfcfcf;
+  padding: 10px 10px;
   margin: 0px 30px 5px 30px;
 `;
 

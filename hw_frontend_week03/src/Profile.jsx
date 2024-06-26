@@ -61,7 +61,7 @@ const Profile = ({ setShowWrite }) => {
       <StyledProfileBox>
         <StyledProfileImg src={process.env.PUBLIC_URL + "/prof.jpg"} />
         <br />
-        <StyledName>{yjInfo.nickName}</StyledName>
+        <StyledName>{yjInfo.nickName}🍀</StyledName>
         <StyledMajor>{yjInfo.major}</StyledMajor>
         <StyledEditBtn src={process.env.PUBLIC_URL + "/edit.jpg"} />
         <br />

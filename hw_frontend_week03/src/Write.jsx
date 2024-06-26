@@ -2,8 +2,8 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledWriteBox = styled.div`
-  border: 1px solid #c0c0c0;
-  margin: 6px 30px 0px 225px;
+  border: 1.5px solid #cfcfcf;
+  margin: -20px 30px 0px 225px;
   padding: 40px 60px;
   height: 200px;
 `;

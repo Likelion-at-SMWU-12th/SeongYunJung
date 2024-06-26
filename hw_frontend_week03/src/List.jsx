@@ -2,26 +2,26 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledListBox = styled.div`
-  border: 1px solid #c0c0c0;
+  border: 1.5px solid #cfcfcf;
   margin: 6px 30px 0px 6px;
   width: 743px;
-  height: 350px;
+  height: 320px;
 `;
 
 const StyledList = styled.div`
-  margin: 60px 20px;
+  margin: 40px 20px;
   font-size: 14px;
 `;
 
 const StyledEm = styled.p`
   font-weight: bold;
-  font-size: 14px;
+  font-size: 15px;
 `;
 
 const StyledHr = styled.hr`
   border: 0;
   height: 1px;
-  background: #c6c6c6;
+  background: #cfcfcf;
   margin: 10px 0px;
 `;
 
@@ -34,17 +34,16 @@ const List = () => {
     <div>
       <StyledListBox>
         <StyledList>
-          <StyledEm>나의 기록</StyledEm>
+          <StyledEm>📋나의 기록📋</StyledEm>
           <hr />
           안녕하쇼- (4)
           <StyledHr />
           게시판 글 제목 (6)
           <StyledHr />
-          리액트 먼가 어려워요.. (11)
+          리액트 어려워요.. (7)
           <StyledHr />
           견뎌 (2)
           <StyledHr />
-          <br />
           <br />
           <StyledOrder>1&nbsp; | &nbsp;2&nbsp; | &nbsp;3</StyledOrder>
         </StyledList>
