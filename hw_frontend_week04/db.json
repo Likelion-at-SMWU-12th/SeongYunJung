@@ -1,0 +1,31 @@
+{
+  "namecards": [
+    {
+      "id": 1,
+      "name": "성윤정",
+      "birth": "1999.11.05",
+      "belong": "숙명여자대학교",
+      "job": "대학생",
+      "hashtag": "#열정적인",
+      "profile": "/photo01.png"
+    },
+    {
+      "id": 2,
+      "name": "성윤정",
+      "birth": "1999.11.05",
+      "belong": "숙멋",
+      "job": "프론트엔드 아기사자",
+      "hashtag": "꼼꼼한",
+      "profile": "/photo02.png"
+    },
+    {
+      "id": 3,
+      "name": "성윤정",
+      "birth": "1999.11.05",
+      "belong": "숙명여대 IT공학",
+      "job": "4학년",
+      "hashtag": "#성실한",
+      "profile": "/photo03.png"
+    }
+  ]
+}
