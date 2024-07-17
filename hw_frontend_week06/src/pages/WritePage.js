@@ -1,8 +1,11 @@
+import axios from "axios";
 import React, { useState } from "react";
 import styled from "styled-components";
 import Button from "../components/Button";
+import { useNavigate } from "react-router-dom";
 
 const WritePage = () => {
+  const navigate = useNavigate();
   const [author, setAuthor] = useState("");
   const [comment, setComment] = useState("");
 
@@ -11,6 +14,24 @@ const WritePage = () => {
   };
   const onChangeComment = (e) => {
     setComment(e.target.value);
+  };
+
+  const postComment = () => {
+    axios
+      .post("http://127.0.0.1:8000/entries/", {
+        //API 명세서에 request-body 있는 경우 명세서에 있는 형태로 URI 콤마 뒤에 적어줘야 함
+        author: author,
+        comment: comment,
+      })
+      .then((response) => {
+        console.log(response);
+        alert("작성이 완료되었습니다.");
+        navigate("/");
+      })
+      .catch((error) => {
+        console.log(error);
+        alert("작성에 실패했습니다.");
+      });
   };
   return (
     <Wrapper>
@@ -27,7 +48,7 @@ const WritePage = () => {
         onChange={onChangeComment}
       />
       <BtnDiv>
-        <Button txt={"작성하기"} />
+        <Button txt={"작성하기"} onBtnClick={postComment} />
       </BtnDiv>
     </Wrapper>
   );

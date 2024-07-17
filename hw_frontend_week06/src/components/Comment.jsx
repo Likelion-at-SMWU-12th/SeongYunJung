@@ -11,8 +11,8 @@ const Comment = () => {
     axios
       .get("http://127.0.0.1:8000/entries/")
       .then((response) => {
-        console.log(response);
-        setComments(response.data);
+        console.log(response.data);
+        setComments(response.data.reverse());
       })
       .catch((error) => {
         console.log(error);
@@ -21,11 +21,15 @@ const Comment = () => {
 
   useEffect(() => {
     getComment();
+    // eslint-disable-next-line
   }, []);
   return (
     <>
       {comments.map((comment) => (
-        <CommentBox onClick={() => navigate(`/comment/${comment.id}`)}>
+        <CommentBox
+          key={comment.id}
+          onClick={() => navigate(`/comment/${comment.id}`)}
+        >
           <Author>{comment.author}</Author>
           <Time>{comment.timestamp}</Time>
           <CommentTxt>{comment.comment}</CommentTxt>
