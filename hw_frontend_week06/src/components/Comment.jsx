@@ -1,58 +1,30 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
-let dummy = [
-  {
-    id: "1",
-    author: "강주은",
-    comment: "(예비) 프론트 최고 권위자",
-    timestamp: "2024-06-28T12:34:56Z",
-  },
-  {
-    id: "2",
-    author: "성윤정",
-    comment: "무럭무럭 쑥쑥 자라날개오",
-    timestamp: "2024-06-28T12:34:56Z",
-  },
-  {
-    id: "3",
-    author: "유동은",
-    comment: "멋쨍이 프론트 .. It’s ME",
-    timestamp: "2024-06-28T12:34:56Z",
-  },
-  {
-    id: "4",
-    author: "이현정",
-    comment: "Great!",
-    timestamp: "2024-06-28T12:34:56Z",
-  },
-  {
-    id: "5",
-    author: "장유빈",
-    comment: "움냠냠",
-    timestamp: "2024-06-28T12:34:56Z",
-  },
-  {
-    id: "6",
-    author: "최현서",
-    comment: "먛…",
-    timestamp: "2024-06-28T12:34:56Z",
-  },
-  {
-    id: "7",
-    author: "이예지",
-    comment:
-      "이렇게하고싶은말이너무많아서말이길어지면당연히텍스트영역이넓어지고보기에이쁘지가않겠죠그래서css로깔끔하게바꿔주려고합니다",
-    timestamp: "2024-06-28T12:34:56Z",
-  },
-];
-
 const Comment = () => {
   const navigate = useNavigate();
+  //Comments라는 배열을 생성하고 이곳에 데이터를 넣어줄 것임.
+  const [comments, setComments] = useState([]);
+  const getComment = () => {
+    axios
+      .get("http://127.0.0.1:8000/entries/")
+      .then((response) => {
+        console.log(response);
+        setComments(response.data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+
+  useEffect(() => {
+    getComment();
+  }, []);
   return (
     <>
-      {dummy.map((comment) => (
+      {comments.map((comment) => (
         <CommentBox onClick={() => navigate(`/comment/${comment.id}`)}>
           <Author>{comment.author}</Author>
           <Time>{comment.timestamp}</Time>
