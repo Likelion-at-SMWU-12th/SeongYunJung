@@ -50,7 +50,11 @@ const DetailPage = () => {
           <Time>{detail.timestamp}</Time>
           <Comment>{detail.comment}</Comment>
           <BtnLine>
-            <Button txt={"수정"} fontSize={"30px"} />
+            <Button
+              txt={"수정"}
+              fontSize={"30px"}
+              onBtnClick={() => navigate(`/modify/${id}/`)}
+            />
             <Button txt={"삭제"} fontSize={"30px"} onBtnClick={getRemove} />
           </BtnLine>
         </DetailDiv>

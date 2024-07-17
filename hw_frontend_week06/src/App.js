@@ -4,6 +4,7 @@ import styled from "styled-components";
 import CommentPage from "./pages/CommentPage";
 import WritePage from "./pages/WritePage";
 import DetailPage from "./pages/DetailPage";
+import ModifyPage from "./pages/ModifyPage";
 
 function App() {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ function App() {
         <Route path="/" element={<CommentPage />} />
         <Route path="/write" element={<WritePage />} />
         <Route path="/comment/:id" element={<DetailPage />} />
+        <Route path="/modify/:id" element={<ModifyPage />} />
       </Routes>
     </Wrapper>
   );
