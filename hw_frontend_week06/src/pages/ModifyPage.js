@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import Button from "../components/Button";
 import { useNavigate, useParams } from "react-router-dom";
@@ -8,8 +8,22 @@ const ModifyPage = () => {
   const navigate = useNavigate();
   const { id } = useParams();
   console.log(id);
+
   const [author, setAuthor] = useState("");
   const [comment, setComment] = useState("");
+
+  useEffect(() => {
+    axios
+      .get(`http://127.0.0.1:8000/entries/${id}/`)
+      .then((response) => {
+        const initValue = response.data;
+        setAuthor(initValue.author);
+        setComment(initValue.comment);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }, [id]);
 
   const onChangeAuthor = (e) => {
     setAuthor(e.target.value);
@@ -34,20 +48,13 @@ const ModifyPage = () => {
         alert("수정에 실패했습니다.");
       });
   };
+
   return (
     <Wrapper>
       <InputTitle>이름</InputTitle>
-      <StyledInput
-        placeholder={author}
-        value={author}
-        onChange={onChangeAuthor}
-      />
+      <StyledInput value={author} onChange={onChangeAuthor} />
       <InputTitle>내용</InputTitle>
-      <StyledTxtarea
-        placeholder={comment}
-        value={comment}
-        onChange={onChangeComment}
-      />
+      <StyledTxtarea value={comment} onChange={onChangeComment} />
       <BtnDiv>
         <Button txt={"수정하기"} onBtnClick={modifyComment} />
       </BtnDiv>
