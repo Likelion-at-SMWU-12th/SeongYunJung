@@ -9,7 +9,8 @@ const DetailPage = () => {
   const { id } = useParams();
   console.log(id);
 
-  const [detail, setDetail] = useState([]);
+  const [detail, setDetail] = useState({});
+
   const getDetail = () => {
     axios
       .get(`http://127.0.0.1:8000/entries/${id}/`)
@@ -41,6 +42,24 @@ const DetailPage = () => {
     // eslint-disable-next-line
   }, []);
 
+  const [comments, setComments] = useState([]);
+  const [commentContent, setCommentContent] = useState("");
+
+  const onChange = (e) => {
+    setCommentContent(e.target.value);
+  };
+
+  const onCreate = () => {
+    setComments([
+      ...comments,
+      {
+        id: comments.length + 1,
+        content: commentContent,
+      },
+    ]);
+    setCommentContent("");
+  };
+
   return (
     <Wrapper>
       <Button txt={"방명록 작성하기"} onBtnClick={() => navigate("/write")} />
@@ -59,6 +78,19 @@ const DetailPage = () => {
           </BtnLine>
         </DetailDiv>
       </DetailWrapper>
+      <CommentForm>
+        <InputComment
+          placeholder="댓글을 남겨보세요!"
+          value={commentContent}
+          onChange={onChange}
+        />
+        <Button txt={"댓글달기"} onBtnClick={onCreate} />
+      </CommentForm>
+      <CommentList>
+        {comments.map((comment) => (
+          <CommentElement key={comment.id}>{comment.content}</CommentElement>
+        ))}
+      </CommentList>
     </Wrapper>
   );
 };
@@ -75,7 +107,7 @@ const DetailWrapper = styled.div`
   border-radius: 20px;
   padding: 100px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
-  margin-top: 50px;
+  margin: 50px 0px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -102,3 +134,33 @@ const BtnLine = styled.div`
   align-items: center;
   gap: 0 20px;
 `;
+
+const CommentForm = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const InputComment = styled.input`
+  border: none;
+  outline: none;
+  background-color: white;
+  padding: 10px 30px;
+  border-radius: 15px;
+  width: 1000px;
+  height: 40px;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 30px 20px 30px 0;
+  &::placeholder {
+    color: #acacac;
+    font-weight: 700;
+  }
+`;
+const CommentList = styled.div`
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+`;
+const CommentElement = styled.div``;
