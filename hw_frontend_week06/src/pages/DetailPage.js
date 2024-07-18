@@ -88,7 +88,9 @@ const DetailPage = () => {
       </CommentForm>
       <CommentList>
         {comments.map((comment) => (
-          <CommentElement key={comment.id}>{comment.content}</CommentElement>
+          <CommentElement key={comment.id}>
+            [{comment.id}] {comment.content}
+          </CommentElement>
         ))}
       </CommentList>
     </Wrapper>
@@ -158,9 +160,30 @@ const InputComment = styled.input`
   }
 `;
 const CommentList = styled.div`
-  margin-top: 50px;
+  margin-top: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 `;
-const CommentElement = styled.div``;
+
+const CommentElement = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 10px 30px;
+  height: 30px;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  font-size: 16px;
+  font-weight: 700;
+  &:hover {
+    cursor: pointer;
+    color: #f0873e;
+    box-shadow: 0 0 10px rgba(238, 110, 67, 0.727);
+    background-color: #fef5f0;
+    transition: ease-in-out 300ms;
+    > span {
+      color: #ffcca8;
+    }
+  }
+`;
