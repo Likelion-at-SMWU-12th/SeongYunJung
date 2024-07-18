@@ -54,6 +54,7 @@ const CommentBox = styled.div`
     color: #f0873e;
     box-shadow: 0 0 10px rgba(238, 110, 67, 0.727);
     background-color: #fef5f0;
+    transition: ease-in-out 300ms;
     > span {
       color: #ffcca8;
     }

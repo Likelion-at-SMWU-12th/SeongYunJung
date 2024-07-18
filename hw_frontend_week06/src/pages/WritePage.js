@@ -35,6 +35,7 @@ const WritePage = () => {
   };
   return (
     <Wrapper>
+      <Title>방명록 작성하기</Title>
       <InputTitle>이름</InputTitle>
       <StyledInput
         placeholder="이름을 입력해주세요."
@@ -60,6 +61,18 @@ const Wrapper = styled.div`
   margin-top: 50px;
   //padding: 0 100px 0 0;
 `;
+
+const Title = styled.div`
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px 20px;
+  border-radius: 15px;
+  color: white;
+  /* text-align: center; */
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 30px;
+`;
+
 const InputTitle = styled.div`
   font-size: 30px;
   font-weight: 700;

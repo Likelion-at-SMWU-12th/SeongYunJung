@@ -22,5 +22,6 @@ const ButtonBox = styled.button`
   font-size: ${(props) => props.fontSize || "20px"};
   &:hover {
     background-color: #f0873e;
+    transition: ease-in-out 300ms;
   }
 `;
