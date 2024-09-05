@@ -10,3 +10,16 @@ export const themeStyle = {
     borderColor: "1.5px solid #C4C4C4",
   },
 };
+
+export const localeStyle = {
+  ko: {
+    writeBtn: "작성하기",
+    editBtn: "수정하기",
+    deleteBtn: "삭제하기",
+  },
+  en: {
+    writeBtn: "write",
+    editBtn: "edit",
+    deleteBtn: "delete",
+  },
+};

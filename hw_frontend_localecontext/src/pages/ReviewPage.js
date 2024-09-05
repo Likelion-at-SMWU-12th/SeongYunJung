@@ -3,11 +3,14 @@ import ReviewList from "../components/ReviewList";
 import { useNavigate } from "react-router";
 import styled from "styled-components";
 import { useTheme } from "../contexts/ThemeContext";
-import { themeStyle } from "../dict/dict";
+import { localeStyle, themeStyle } from "../dict/dict";
+import { useLocale } from "../contexts/LocaleContext";
+import LocaleSelect from "../components/LocaleSelect";
 
 const ReviewPage = () => {
   const navigate = useNavigate();
   const { theme } = useTheme();
+  const { locale } = useLocale();
 
   return (
     <>
@@ -16,8 +19,10 @@ const ReviewPage = () => {
         textColor={themeStyle[theme]["textColor"]}
       >
         <h1>테마 : {theme}</h1>
-
-        <button onClick={() => navigate("/create")}>작성하기</button>
+        <LocaleSelect />
+        <button onClick={() => navigate("/create")}>
+          {localeStyle[locale]["writeBtn"]}
+        </button>
         <ReviewList />
       </Wrapper>
     </>

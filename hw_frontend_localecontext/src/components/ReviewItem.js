@@ -1,10 +1,12 @@
 import React from "react";
 import styled from "styled-components";
 import { useTheme } from "../contexts/ThemeContext";
-import { themeStyle } from "../dict/dict";
+import { localeStyle, themeStyle } from "../dict/dict";
+import { useLocale } from "../contexts/LocaleContext";
 
-const ReviewItem = ({ title, comment, img }) => {
+const MovieItem = ({ title, comment, img }) => {
   const { theme } = useTheme();
+  const { locale } = useLocale();
   return (
     <ReviewDiv borderColor={themeStyle[theme]["borderColor"]}>
       <img src={img} alt="movieimg" />
@@ -12,15 +14,15 @@ const ReviewItem = ({ title, comment, img }) => {
         <div className="title">{title || "제목"}</div>
         <div className="comment">{comment || "리뷰"}</div>
         <div style={{ display: "flex" }} className="btnline">
-          <button>수정하기</button>
-          <button>삭제하기</button>
+          <button>{localeStyle[locale]["editBtn"]}</button>
+          <button>{localeStyle[locale]["deleteBtn"]}</button>
         </div>
       </div>
     </ReviewDiv>
   );
 };
 
-export default ReviewItem;
+export default MovieItem;
 
 const ReviewDiv = styled.div`
   display: flex;
