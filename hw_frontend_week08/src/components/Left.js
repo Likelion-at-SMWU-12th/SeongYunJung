@@ -1,12 +1,14 @@
 import React from "react";
 import styled from "styled-components";
+import { usePart } from "../contexts/PartContext";
 
-const Left = ({ setPart }) => {
+const Left = () => {
+  const { part, clickPart } = usePart();
   return (
     <Wrapper>
-      <button onClick={() => setPart("프론트엔드")}>프론트엔드</button>
-      <button onClick={() => setPart("백엔드")}>백엔드</button>
-      <button onClick={() => setPart("기획/디자인")}>기획/디자인</button>
+      <button onClick={() => clickPart("프론트엔드")}>프론트엔드</button>
+      <button onClick={() => clickPart("백엔드")}>백엔드</button>
+      <button onClick={() => clickPart("기획/디자인")}>기획/디자인</button>
     </Wrapper>
   );
 };
