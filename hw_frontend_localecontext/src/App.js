@@ -3,10 +3,11 @@ import ReviewPage from "./pages/ReviewPage";
 import CreatePage from "./pages/CreatePage";
 import ToggleBtn from "./components/ToggleBtn";
 import { ThemeProvider } from "./contexts/ThemeContext";
+import { LocaleProvider } from "./contexts/LocaleContext";
 
 function App() {
   return (
-    <>
+    <LocaleProvider>
       <ThemeProvider>
         <Routes>
           <Route path="/" element={<ReviewPage />} />
@@ -14,7 +15,7 @@ function App() {
         </Routes>
         <ToggleBtn />
       </ThemeProvider>
-    </>
+    </LocaleProvider>
   );
 }
 
