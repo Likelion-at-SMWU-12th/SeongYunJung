@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import ReviewList from "../components/ReviewList";
 import { useNavigate } from "react-router";
 import styled from "styled-components";
-import ThemeContext from "../contexts/ThemeContext";
+import { useTheme } from "../contexts/ThemeContext";
 
 const ReviewPage = () => {
   const navigate = useNavigate();
-  const theme = useContext(ThemeContext);
+  const { theme } = useTheme();
 
   return (
     <>
