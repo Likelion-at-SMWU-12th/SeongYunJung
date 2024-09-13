@@ -1,11 +1,14 @@
 import React from "react";
 import styled from "styled-components";
 import FavoriteItem from "../components/FavoriteItem";
+import useMovieStore from "../store/store";
 
 const FavoriteMovie = () => {
+  const interestMovies = useMovieStore((state) => state.interestMovies);
+
   return (
     <Container>
-      <Header>관심 영화 목록 </Header>
+      <Header>관심 영화 목록 ({interestMovies.length})</Header>
       <MovieContainer>
         <FavoriteItem />
       </MovieContainer>
