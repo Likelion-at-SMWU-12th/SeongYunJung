@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "title": "베테랑2",
+    "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88488/88488_1000.jpg",
+    "releaseDate": "2024.09.13 개봉",
+    "interested": false
+  },
+  {
+    "id": 2,
+    "title": "임영웅ㅣ아임 히어로 더 스타디움",
+    "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88499/88499_1000.jpg",
+    "releaseDate": "2024.08.28 개봉",
+    "interested": false
+  },
+  {
+    "id": 3,
+    "title": "정국: 아이 엠 스틸",
+    "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88687/88687_1000.jpg",
+    "releaseDate": "2024.09.18 개봉",
+    "interested": false
+  },
+  {
+    "id": 4,
+    "title": "브레드이발소-빵스타의 탄생 ",
+    "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88485/88485_1000.jpg",
+    "releaseDate": "2024.09.14 개봉",
+    "interested": false
+  },
+  {
+    "id": 5,
+    "title": "조커-폴리 아 되",
+    "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88531/88531_1000.jpg",
+    "releaseDate": "2024.10.01 개봉",
+    "interested": false
+  },
+  {
+    "id": 6,
+    "title": "새벽의 모든",
+    "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88527/88527_1000.jpg",
+    "releaseDate": "2024.09.18 개봉",
+    "interested": false
+  },
+  {
+    "id": 7,
+    "title": "10 라이브즈",
+    "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88411/88411_1000.jpg",
+    "releaseDate": "2024.08.15 개봉",
+    "interested": false
+  },
+  {
+    "id": 8,
+    "title": "요네즈 켄시 2023 투어 / 공상",
+    "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88651/88651_1000.jpg",
+    "releaseDate": "2024.09.11 개봉",
+    "interested": false
+  },
+  {
+    "id": 9,
+    "title": "사랑의 하츄핑",
+    "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88403/88403_1000.jpg",
+    "releaseDate": "2024.08.07 개봉",
+    "interested": false
+  },
+  {
+    "id": 10,
+    "title": "안녕, 할부지",
+    "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88628/88628_1000.jpg",
+    "releaseDate": "2024.09.04 개봉",
+    "interested": false
+  },
+  {
+    "id": 11,
+    "title": "대도시의 사랑법",
+    "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88538/88538_1000.jpg",
+    "releaseDate": "2024.10.01 개봉",
+    "interested": false
+  },
+  {
+    "id": 12,
+    "title": "빅토리",
+    "poster": "https://img.cgv.co.kr/Movie/Thumbnail/Poster/000088/88380/88380_1000.jpg",
+    "releaseDate": "2024.08.14 개봉",
+    "interested": false
+  }
+]
