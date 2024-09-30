@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { useQuery } from "@tanstack/react-query";
 
 function App() {
+  async function getPosts() {
+    const response = await fetch(`https://jsonplaceholder.typicode.com/posts`);
+    // return await response.json();
+    throw new Error("An error occurred!");
+  }
+  const {
+    data: postsData,
+    isPending,
+    isError,
+  } = useQuery({
+    queryKey: ["posts"],
+    queryFn: getPosts,
+  });
+
+  if (isPending) return "로딩 중입니다...";
+
+  if (isError) return "에러가 발생했습니다.";
+
+  const posts = postsData ?? [];
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ul>
+        {posts.map((post) => (
+          <li key={post.id}>{post.title}</li>
+        ))}
+      </ul>
     </div>
   );
 }
