@@ -10,6 +10,7 @@ const Greeting = () => {
     // 카카오 API 사용자 정보 요청 엔드포인트로 get요청
     fetch("https://kapi.kakao.com/v2/user/me", {
       method: "GET",
+      // Bearer ${accessToken} 형식으로 설정, access token을 서버에 전달하고 인증 진행
       headers: {
         Authorization: `Bearer ${accessToken}`,
         "Content-Type": "application/x-www-form-urlencoded",

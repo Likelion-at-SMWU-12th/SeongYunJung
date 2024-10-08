@@ -20,6 +20,7 @@ const Redirection = () => {
         //   redirect_uri: process.env.REACT_APP_REDIRECT_URI,
         //   code: authCode,
         // }),
+        // 서버에 전송하는 데이터의 형식을 URL 인코딩 형식으로 지정해서 요청
         headers: {
           "Content-Type": "application/x-www-form-urlencoded",
         },
